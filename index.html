@@ -28,12 +28,10 @@
     "https://www.tiktok.com/@btsytt"
   ],
   "makesOffer": [
-    {"@type": "Offer", "priceCurrency": "TTD", "price": "500", "itemOffered": {"@type": "Service", "name": "Standard Digital Fingerprint Audit", "description": "Search results review plus main public profiles, with a summary report."}},
-    {"@type": "Offer", "priceCurrency": "TTD", "price": "900", "itemOffered": {"@type": "Service", "name": "Deep Dive Digital Fingerprint Audit", "description": "Standard audit plus older content, secondary platforms, directory and image results, and fuller recommendations."}},
-    {"@type": "Offer", "priceCurrency": "TTD", "price": "2500", "itemOffered": {"@type": "Service", "name": "Corporate Public Visibility Check", "description": "Candidate-facing public visibility checks for businesses, one report per subject plus an employer summary."}},
+    {"@type": "Offer", "priceCurrency": "TTD", "price": "500", "itemOffered": {"@type": "Service", "name": "Standard Public Digital Fingerprint Audit", "description": "Public search results and main public profiles, with a plain-language summary report."}},
+    {"@type": "Offer", "priceCurrency": "TTD", "price": "900", "itemOffered": {"@type": "Service", "name": "Deep Dive Public Digital Fingerprint Audit", "description": "Fuller review of search results, public profiles, image results, directory mentions, and older public content."}},
     {"@type": "Offer", "priceCurrency": "TTD", "price": "450", "itemOffered": {"@type": "Service", "name": "Business Visibility Snapshot", "description": "Written search and AI visibility audit with a score and prioritized fix list."}},
-    {"@type": "Offer", "priceCurrency": "TTD", "price": "1200", "itemOffered": {"@type": "Service", "name": "Business Visibility Builder", "description": "Full visibility audit plus every fix delivered ready to paste in."}},
-    {"@type": "Offer", "priceCurrency": "TTD", "price": "1800", "itemOffered": {"@type": "Service", "name": "Business Visibility Partner", "description": "Builder package plus monthly content, consistency review, and re-score."}}
+    {"@type": "Offer", "priceCurrency": "TTD", "price": "1200", "itemOffered": {"@type": "Service", "name": "Visibility Builder", "description": "Visibility audit plus ready-to-use fixes, including page wording, profile corrections, FAQ content, metadata, and visibility recommendations."}}
   ]
 }
 </script>
@@ -45,7 +43,7 @@
     {"@type": "Question", "name": "What is a public digital fingerprint audit?", "acceptedAnswer": {"@type": "Answer", "text": "A public digital fingerprint audit is a structured review of what is publicly visible about you online: search results, public social profiles, public websites and directory listings. BTSY documents what actually shows up when someone searches your name and delivers a report with clear recommendations. Message 1-868-795-3112 on WhatsApp to begin."}},
     {"@type": "Question", "name": "Does BTSY access private accounts or private records?", "acceptedAnswer": {"@type": "Answer", "text": "No. BTSY is a public digital fingerprint company. It reviews public-facing data only and never accesses private accounts, messages, credit records, police records, medical records, or deleted content. The audit shows you the same public picture a hiring manager or client sees."}},
     {"@type": "Question", "name": "What do employers see when they search my name?", "acceptedAnswer": {"@type": "Answer", "text": "Employers typically see your public search results, public social media profiles, images, and any pages that mention your name. Most people have never checked this picture for themselves. A BTSY audit documents it for you before an interview or promotion decision, so nothing is a surprise."}},
-    {"@type": "Question", "name": "How much does a BTSY audit cost in Trinidad and Tobago?", "acceptedAnswer": {"@type": "Answer", "text": "Personal audits start at TT$500 for the Standard audit, TT$900 for the Deep Dive, and TT$2,500 for Corporate candidate-facing checks. Business visibility audits start at TT$450 for the Snapshot. Message 1-868-795-3112 on WhatsApp for the package that fits your situation."}},
+    {"@type": "Question", "name": "How much does a BTSY audit cost in Trinidad and Tobago?", "acceptedAnswer": {"@type": "Answer", "text": "Personal audits are TT$500 for the Standard Public Digital Fingerprint Audit and TT$900 for the Deep Dive Public Digital Fingerprint Audit. Business visibility audits are TT$450 for the Visibility Snapshot and TT$1,200 for the Visibility Builder. Custom business and corporate work is available by request through the BTSY audit form. Message 1-868-795-3112 on WhatsApp for the package that fits your situation."}},
     {"@type": "Question", "name": "Can BTSY remove content or guarantee results?", "acceptedAnswer": {"@type": "Answer", "text": "No service can honestly guarantee removal of online content, a job, or a reputation outcome, and BTSY does not. The audit gives you an accurate picture of your public presence and practical recommendations you can act on. What you do with that picture stays in your control."}},
     {"@type": "Question", "name": "Can BTSY help my business show up on Google and in AI answers?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. BTSY's business visibility audits review how your business appears in search engines and in AI assistant answers, then deliver a score and ready-to-use fixes: schema markup, page wording, FAQ content, and profile consistency corrections. Message 1-868-795-3112 on WhatsApp to start with a Snapshot."}},
     {"@type": "Question", "name": "How do I request a BTSY audit?", "acceptedAnswer": {"@type": "Answer", "text": "Send a WhatsApp message to 1-868-795-3112 or complete the BTSY audit request form. You will get a confirmation, the payment step, and a clear timeline. Every audit covers the person or business named in the request, using public data only."}}
@@ -100,6 +98,8 @@ section.soft{background:var(--soft)}
 .copy p{color:var(--muted);margin-bottom:12px}
 .notice{max-width:820px;margin-top:24px;padding:20px 22px;border-left:4px solid var(--aqua);background:#fff;border-radius:0 8px 8px 0;box-shadow:0 8px 22px rgba(18,53,94,.08)}
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.pricing-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+.custom-card{grid-column:1/-1}
 .card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px;box-shadow:0 10px 28px rgba(18,53,94,.08)}
 .card h3{font-size:1.08rem;margin-bottom:8px}
 .card p{color:var(--muted);font-size:.96rem;margin-bottom:0}
@@ -207,10 +207,9 @@ details p{color:var(--muted);margin:10px 0 0}
       </div>
     </div>
     <div class="wrap">
-      <div class="cards" aria-label="Personal audit packages">
-        <article class="card accent"><h3>Standard Audit</h3><div class="price">TT$500</div><p>A review of your public search results and main public profiles, with a plain-language summary report and recommendations you can act on.</p></article>
-        <article class="card accent"><h3>Deep Dive Audit</h3><div class="price">TT$900</div><p>Everything in Standard, plus older content, secondary platforms, directory and image results, and fuller recommendations for your public presence.</p></article>
-        <article class="card gold"><h3>Corporate Check</h3><div class="price">TT$2,500 <small>and up</small></div><p>Candidate-facing public visibility checks for businesses and hiring teams. One report per subject, plus an employer summary. Public data only.</p></article>
+      <div class="cards pricing-cards" aria-label="Personal audit packages">
+        <article class="card accent"><h3>Standard Public Digital Fingerprint Audit</h3><div class="price">TT$500</div><p>Best for job seekers, professionals, creators, and founders who want to know what appears publicly before someone searches them.</p></article>
+        <article class="card accent"><h3>Deep Dive Public Digital Fingerprint Audit</h3><div class="price">TT$900</div><p>Best when you want a fuller review of search results, public profiles, image results, directory mentions, and older public content.</p></article>
       </div>
     </div>
   </section>
@@ -228,10 +227,10 @@ details p{color:var(--muted);margin:10px 0 0}
       </div>
     </div>
     <div class="wrap">
-      <div class="cards" aria-label="Business visibility packages">
-        <article class="card accent"><h3>Visibility Snapshot</h3><div class="price">TT$450</div><p>A written audit of your search and AI visibility: a score out of 100 and a prioritized fix list. Proof before you commit to a build.</p></article>
-        <article class="card accent"><h3>Visibility Builder</h3><div class="price">TT$1,200</div><p>The full audit plus every fix delivered ready to paste in: schema markup, page titles and descriptions, FAQ content, rewrites, and consistency corrections.</p></article>
-        <article class="card gold"><h3>Visibility Partner</h3><div class="price">TT$1,800 <small>setup, then TT$600/month</small></div><p>The Builder package, then monthly fresh content, a profile consistency check, and a re-score against your baseline so you can see movement.</p></article>
+      <div class="cards pricing-cards" aria-label="Business visibility packages">
+        <article class="card accent"><h3>Visibility Snapshot</h3><div class="price">TT$450</div><p>Best for businesses that want to know how they appear on Google, social platforms, directories, and AI answers before paying for fixes.</p></article>
+        <article class="card accent"><h3>Visibility Builder</h3><div class="price">TT$1,200</div><p>Best for businesses that want the audit plus ready-to-use fixes, including page wording, profile corrections, FAQ content, metadata, and visibility recommendations.</p></article>
+        <article class="card gold custom-card"><h3>Custom Business and Corporate Work</h3><p>Corporate checks and monthly visibility partner services are available by request through the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXPpbLe28cI8Flsy2BFIksKhC3kBZSyrygvgTje2-5wbM_mQ/viewform">BTSY audit form</a>. Public-data only. No private accounts. No background checks. No guaranteed outcomes.</p></article>
       </div>
     </div>
   </section>
@@ -263,7 +262,7 @@ details p{color:var(--muted);margin:10px 0 0}
       <details><summary>What is a public digital fingerprint audit?</summary><p>It is a structured review of what is publicly visible about you online: search results, public social profiles, public websites and directory listings. BTSY documents what actually shows up when someone searches your name and delivers a report with clear recommendations.</p></details>
       <details><summary>Does BTSY access private accounts or private records?</summary><p>No. BTSY is a public digital fingerprint company. It reviews public-facing data only and never accesses private accounts, messages, credit records, police records, medical records, or deleted content. The audit shows you the same public picture a hiring manager or client sees.</p></details>
       <details><summary>What do employers see when they search my name?</summary><p>Employers typically see your public search results, public social profiles, images, and any pages that mention your name. Most people have never checked this picture for themselves. A BTSY audit documents it for you before an interview or promotion decision.</p></details>
-      <details><summary>How much does a BTSY audit cost?</summary><p>Personal audits start at TT$500 for the Standard audit, TT$900 for the Deep Dive, and TT$2,500 for Corporate candidate-facing checks. Business visibility audits start at TT$450 for the Snapshot.</p></details>
+      <details><summary>How much does a BTSY audit cost?</summary><p>Personal audits are TT$500 for the Standard Public Digital Fingerprint Audit and TT$900 for the Deep Dive Public Digital Fingerprint Audit. Business visibility audits are TT$450 for the Visibility Snapshot and TT$1,200 for the Visibility Builder. Custom business and corporate work is available by request through the BTSY audit form.</p></details>
       <details><summary>Can BTSY remove content or guarantee results?</summary><p>No service can honestly guarantee removal of online content, a job, or a reputation outcome, and BTSY does not. The audit gives you an accurate picture of your public presence and practical recommendations you can act on.</p></details>
       <details><summary>Can BTSY help my business show up on Google and in AI answers?</summary><p>Yes. The business visibility audits review how your business appears in search engines and AI assistant answers, then deliver a score and ready-to-use fixes: schema markup, page wording, FAQ content, and profile consistency corrections.</p></details>
       <details><summary>How do I request an audit?</summary><p>Send a WhatsApp message to 1-868-795-3112 or complete the BTSY audit request form. You will get a confirmation, the payment step, and a clear timeline.</p></details>
